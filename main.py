@@ -3,10 +3,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from github_auth import get_repositories
-from git_commit import commit_changes
-from git_push import push_changes
-from sonar_integration import sonar_review
-from ai_code_review import ai_code_review
+from git_push_commit import CommitRequest, push_changes,commit_changes
+from sonar_integration import sonar_review,ai_code_review
 
 app = FastAPI()
 
